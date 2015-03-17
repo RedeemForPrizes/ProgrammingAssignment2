@@ -1,17 +1,17 @@
 ##
 ## Coursera Course, R Programing, Week 3
-## Programming assignment 2
+## Programming Assignment 2
 ## https://class.coursera.org/rprog-012/human_grading/view/courses/973493/assessments/3/submissions
 ##
-## This version written by Harvey Siewert, 15-03-14
+## Written by Harvey Siewert, 15-03-14
 ##
-## Based on a code template provided by Roger D Peng
-## and expert commentary provided by Hussain Boxwala
+## Assignment template provided by Roger D Peng
+## Thanks to Hussain Boxwala for an excellent overview of Roger's example code.
 ## See: https://class.coursera.org/rprog-012/forum/thread?thread_id=229
 ##
 
 
-## Takes a matrix as an argument and caches it in a list stored in the parent environment
+## This function takes a matrix as an argument and caches it in a list stored in the parent environment
 ##
 ## Creates a number of functions to
 ## - store and retrieve the incoming matrix to/from "x"
@@ -41,10 +41,10 @@ makeCacheMatrix <- function(x = matrix()) {
         get <- function() x
 
         # Function to cache the matrix inverse
-        # Takes a matrix as an arg and assignes it to the cached matrix inverse variable    
+        # Takes a matrix as an arg and assigns it to the cached matrix inverse variable    
         setInverse <- function(solvedInverse) cachedMatrixInverse <<- solvedInverse
         
-        # Function returns the value of the cached matrix invers
+        # Returns the value of the cached matrix inverse
         getInverse <- function() cachedMatrixInverse
 
         # Returns a list containing the functions to set and retrieve 
